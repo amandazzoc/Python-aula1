@@ -1,14 +1,28 @@
 heroisM = ["Homem Aranha", "Hulk", "Gavião Arqueiro", "Homem de Ferro", "Wanda"]
 heroisD = ["Super Homem", "Mulher Maravilha", "Batman", "Flash", "Aquaman"]
 
-universos = ["Marvel", "DC"]
+
 
 universo = input("Digite um universo de heróis: ")
-if universo == universos[0]:
+if universo == "Marvel":
     print("Você escolheu Marvel")
     herois = input("Digite um Herói da Marvel: ")
-elif universo == universos[1]:
+    if herois in heroisM:
+        n = int(input("Quantas vezes quer que repita? "))
+        contador = 0
+        while(contador < n):
+            contador = contador + 1
+            print(herois)
+    else:
+        print("Herói não encontrado :(")
+elif universo == "DC":
     print("Você escolheu DC")
     herois = input("Digite um Herói da DC: ")
+    if herois in heroisD:
+        n = int(input("Quantas vezes quer que repita? "))
+        contador = 0
+        while(contador < n):
+            contador = contador + 1
+            print(herois)
 else:
     print("Universo não encontrado")
